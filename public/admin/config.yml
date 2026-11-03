@@ -1,0 +1,13 @@
+
+backend: {name: github, repo: YOUR/spanler.com, branch: main}
+media_folder: public/uploads
+collections:
+  - name: phone_numbers
+    label: 电话号管理 (A+B)
+    folder: content/phone_numbers
+    fields:
+      - {label: 号码, name: number, widget: string}
+      - {label: 价格(分), name: price, widget: number}
+      - {label: 月租(分), name: monthly_fee, widget: number}
+      - {label: 状态, name: status, widget: select, options: [available, sold, reserved]}
+      - {label: 二级域名, name: subdomain, widget: string}

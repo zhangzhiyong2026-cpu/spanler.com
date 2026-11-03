@@ -1,0 +1,11 @@
+{
+  "name": "spanler-v41",
+  "version": "4.1.0",
+  "scripts": {
+    "dev": "vite --port 3000 --host",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
