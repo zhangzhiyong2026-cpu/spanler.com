@@ -7,7 +7,8 @@
 - 7 核心页面 × 中/英/西三语，另有隐私/Cookie 页面，共 27 个预渲染路由。
 - `/admin/`：独立数据库内容后台；编辑文案、上传图片/音视频/PDF、插入素材、保存发布、管理线索。
 - `/admin/git/`：自托管 Sveltia CMS；GitHub OAuth 配置后可编辑 Git 默认文案。D1 发布内容优先于 Git 默认内容。
-- 本地集成和浏览器验证通过；线上 Cloudflare、真实 Turnstile、Groq、NocoDB、邮件尚未联调。不能把本地测试通过视为正式上线。
+- 官网与D1内容后台已发布到现有Cloudflare Pages项目 `spanler-com`。正式27个公共路由、内容API及手机布局已检查；用户完成真实Turnstile后台登录、图片上传和发布，正式中文首页的图片展示已在电脑/手机浏览器验证。
+- AI客服保持关闭，邮件通知、外部NocoDB和Sveltia Git OAuth尚未启用；联系表单成功提交仍未做生产人工验收。详见 [正式验收记录](docs/LIVE-VERIFICATION.md)。
 - 原电话商城代码已移除。原代码归档在当前环境 `/workspace/spanler-backups/legacy-source-20261104.tar.gz`，旧本地测试数据库也已归档后清除，新版使用独立数据库；线上数据库尚未操作。
 - 方案中“78页”尚未确认，当前按 7 个核心栏目实现。尚未提供最终系统提示词，因此 `shared/content.js` 包含可审阅的初稿。
 

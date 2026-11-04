@@ -45,3 +45,9 @@ Cloudflare免费额度、NocoDB服务器、模型与邮件收费均需按真实�
 账户级API令牌已验证，spanler-com现有项目与spanler.com域名绑定已确认。新建spanler-content已执行生产迁移，绑定MEDIA/CHAT_LOGS，已创建专用Managed Turnstile，并生成私有管理员凭据。
 
 Cloudflare直传发布成功，GitHub main已在用户明确批准后同步。Git自动构建的旧Wrangler3解析问题已定位，现改为Wrangler4预编译高级模式Worker；本地该模式的10类接口检查通过。生产域名HTTP验收仍待云环境的新网络名单生效。AI保持关闭，邮件和外部CRM未启用。
+
+## 最终内容后台生产验收更新
+
+用户已完成真实Turnstile后台登录、PNG图片上传、插入首页及保存发布。已只读确认生产D1媒体和页面记录、正式图片地址及图片解码；正常Chromium已确认图片实际出现在 `/zh/`，桌面及390px手机布局均正常。另以独立测试对象验证了正式Worker的D1/R2读取，测试数据已清理，用户图片未修改或删除。
+
+本节更新早期的“待生产验收”状态；未完成的集成和实际检查范围以 [正式验收记录](LIVE-VERIFICATION.md) 为准。
