@@ -25,5 +25,6 @@
     "AI_ENABLED": "false",
     "NOCODB_MODE": "records",
     "NOTIFY_EMAIL": "zzy4628@gmail.com",
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFzECDbSrzWs8rXE",
   },
 }
