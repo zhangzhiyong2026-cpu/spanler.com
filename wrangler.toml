@@ -1,0 +1,15 @@
+name = "spanler-com"
+compatibility_date = "2024-01-01"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "spanler-media"
+
+[[r2_buckets]]
+binding = "LOGS"
+bucket_name = "spanler-logs"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "spanler-marketplace"
+database_id = "spanler-marketplace"
