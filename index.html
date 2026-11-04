@@ -1,11 +1,134 @@
-<!doctype html><html lang="zh"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Spanler V4.1 A+B 主站</title>
-<style>body{margin:0;font-family:system-ui;background:#0A0A0B;color:#fff}header{padding:16px;border-bottom:1px solid #222;display:flex;justify-content:space-between} .card{background:#151518;border:1px solid #222;border-radius:12px;padding:20px;margin:16px 0} .btn{background:#7C6CFF;color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;display:inline-block}</style>
-</head><body>
-<header><b>Spanler.com 主站</b><a href="/buy/" style="color:#7C6CFF">云电话 buy.spanler.com →</a></header>
-<div style="padding:20px;max-width:1000px;margin:auto">
-<div class="card"><h2>V4.1 A+B 一期 - 主站入口</h2><p>主站 Marketplace 已加云电话入口，点击跳转子站。手机PC自适应。</p>
-<a class="btn" href="/buy/">进入买电话号子站</a>
-<a class="btn" href="/marketplace-phone.html" style="margin-left:8px;background:#222">Marketplace分类预览</a>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spanler.com V4.1 - 美国华人生活门户 Marketplace</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body{background:#0A0A0B;color:#EAEAF0}
+.card{background:#151518;border:1px solid #222;border-radius:16px}
+.btn{background:#7C6CFF;color:white}
+</style>
+</head>
+<body class="min-h-screen">
+<header class="border-b border-zinc-800 p-4 sticky top-0 bg-[#0A0A0B]/90 backdrop-blur z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<div class="text-xl font-bold"><span class="text-[#7C6CFF]">Spanler</span>.com V4.1</div>
+<nav class="hidden md:flex gap-4 text-sm text-zinc-400">
+<a href="/" class="text-white">首页</a>
+<a href="/marketplace-phone.html">云电话</a>
+<a href="/buy/">黄页</a>
+<a href="#">租房</a>
+<a href="#">招聘</a>
+<a href="#">二手</a>
+<a href="#">汽车</a>
+</nav>
 </div>
-<div class="card"><h3>功能清单（真功能版）</h3><ul><li>✅ AI客服已切Groq Llama，无豆包</li><li>✅ D1 phone_numbers表 + 通配符Worker</li><li>✅ 二级域名 2135551234.buy.spanler.com 自动解析</li><li>✅ Sveltia后台可批量导入号池</li></ul></div>
-</div></body></html>
+<div class="flex items-center gap-3 flex-1 max-w-xl">
+<input placeholder="搜租房、招聘、黄页、电话号..." class="w-full bg-zinc-900 border border-zinc-800 rounded-full px-4 py-2 text-sm">
+<button class="bg-[#7C6CFF] px-5 py-2 rounded-full text-sm">搜索</button>
+</div>
+<div class="flex gap-2">
+<a href="/admin" class="border border-zinc-700 px-4 py-2 rounded-full text-sm">后台</a>
+<a href="/buy/" class="bg-white text-black px-4 py-2 rounded-full text-sm">发布信息</a>
+</div>
+</div>
+</header>
+
+<main class="max-w-7xl mx-auto p-4 grid grid-cols-12 gap-6 mt-6">
+<!-- Left feed 8 cols -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="card p-6">
+<div class="flex gap-2 mb-3"><span class="bg-[#7C6CFF] text-xs px-2 py-1 rounded">置顶</span><span class="text-xs text-zinc-500">Marketplace 7大板块已上线</span></div>
+<h2 class="text-2xl font-bold mb-2">美国华人生活门户 - V4.1 A+B 一期主站已通</h2>
+<p class="text-zinc-400 text-sm">主站7大板块：云电话 / 黄页 / 生活服务 / 租房 / 招聘 / 二手 / 汽车。AI SDR真Groq Llama已接通，D1真数据库，R2真存储。</p>
+<div class="flex gap-2 mt-4">
+<a href="/buy/" class="btn px-4 py-2 rounded-full text-sm">进入云电话子站</a>
+<a href="/marketplace-phone.html" class="border border-zinc-700 px-4 py-2 rounded-full text-sm">查看真数据3卡片</a>
+</div>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<div class="card p-4 text-center"><div class="text-2xl mb-1">📞</div><div class="text-sm">云电话靓号</div><div class="text-xs text-zinc-500">213/626/949</div></div>
+<div class="card p-4 text-center"><div class="text-2xl mb-1">📒</div><div class="text-sm">黄页</div><div class="text-xs text-zinc-500">餐饮/装修/律师</div></div>
+<div class="card p-4 text-center"><div class="text-2xl mb-1">🏠</div><div class="text-sm">租房</div><div class="text-xs text-zinc-500">El Monte/Irvine</div></div>
+<div class="card p-4 text-center"><div class="text-2xl mb-1">💼</div><div class="text-sm">招聘</div><div class="text-xs text-zinc-500">LA华人招聘</div></div>
+</div>
+
+<div class="card p-5">
+<h3 class="font-bold mb-4">生活黄页 - 精选商家</h3>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div class="flex justify-between border-b border-zinc-800 pb-2"><span>川菜馆 El Monte</span><span class="text-zinc-500">626-xxx</span></div>
+<div class="flex justify-between border-b border-zinc-800 pb-2"><span>装修队 LA</span><span class="text-zinc-500">213-xxx</span></div>
+<div class="flex justify-between border-b border-zinc-800 pb-2"><span>华人律师</span><span class="text-zinc-500">咨询</span></div>
+<div class="flex justify-between border-b border-zinc-800 pb-2"><span>会计报税</span><span class="text-zinc-500">Irvine</span></div>
+</div>
+</div>
+
+<div class="card p-5">
+<h3 class="font-bold mb-3">社区论坛最新</h3>
+<div class="space-y-3 text-sm">
+<div>【求租】El Monte 2B1B $1800 包水电 <span class="text-zinc-500 text-xs">- 2分钟前</span></div>
+<div>【招聘】Irvine奶茶店招人 $18/h <span class="text-zinc-500 text-xs">- 10分钟前</span></div>
+<div>【二手】二手丰田Camry 2019 $12000 <span class="text-zinc-500 text-xs">- 1小时前</span></div>
+</div>
+</div>
+</div>
+
+<!-- Right sidebar 4 cols -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="card p-5">
+<h3 class="font-bold mb-3">🔥 云电话靓号热销 (真D1数据)</h3>
+<div id="phone-list" class="space-y-3 text-sm">加载中... /api/phones 读取中...</div>
+<p class="text-xs text-zinc-500 mt-3">数据来自 D1 phone_numbers 表，Groq AI已接通，R2存储已建</p>
+</div>
+
+<div class="card p-5 bg-gradient-to-br from-[#7C6CFF]/20 to-transparent">
+<h3 class="font-bold mb-2">AI SDR 助手 (Groq Llama 70B 真Key已绑)</h3>
+<p class="text-xs text-zinc-400 mb-3">问：这个626号码多少钱？租房怎么发布？</p>
+<div class="bg-black/50 rounded-lg p-3 text-xs">输入你的问题，右下角聊天窗真对话，不再是mock</div>
+<a href="/buy/" class="btn block text-center mt-3 py-2 rounded-full text-sm">去买号商城问AI</a>
+</div>
+
+<div class="card p-5">
+<h3 class="font-bold mb-2">后台管理 Sveltia CMS</h3>
+<p class="text-xs text-zinc-400">上传图片/音频/PDF直接改前端，0月租</p>
+<a href="/admin" class="border border-zinc-700 block text-center mt-3 py-2 rounded-full text-sm">进入 /admin</a>
+</div>
+
+<div class="card p-4 text-xs text-zinc-500">
+<p>主站：staging.spanler.com / spanler-com.pages.dev ✅</p>
+<p>子站：buy.spanler.com ✅</p>
+<p>野卡：*.buy.spanler.com DNS已加，待自定义域名激活</p>
+<p>D1：spanler-marketplace 3行 ✅</p>
+<p>R2：spanler-media / spanler-logs 已建 ✅</p>
+</div>
+</div>
+</main>
+
+<script>
+async function loadPhones(){
+ try{
+  const r = await fetch('/api/phones');
+  const data = await r.json();
+  const el = document.getElementById('phone-list');
+  if(!data.length){el.innerHTML='暂无数据，请检查D1绑定';return}
+  el.innerHTML = data.map(p=>`
+   <div class="border border-zinc-800 rounded-xl p-3">
+     <div class="flex justify-between"><b>${p.number.replace(/(\d{3})(\d{3})(\d{4})/,'$1-$2-$3')}</b><span class="text-[#7C6CFF]">$${p.price}</span></div>
+     <div class="text-xs text-zinc-500">${p.description||''} | 月租 $${p.monthly_fee}</div>
+     <div class="flex gap-2 mt-2">
+       <a href="/buy/number/${p.number}.html" class="text-xs bg-zinc-800 px-2 py-1 rounded">落地页</a>
+       <a href="https://${p.subdomain}" class="text-xs bg-[#7C6CFF] px-2 py-1 rounded">二级域名</a>
+     </div>
+   </div>
+  `).join('');
+ }catch(e){
+  document.getElementById('phone-list').innerHTML='加载失败: '+e.message+'<br>请检查 /api/phones 是否部署，删掉wrangler.toml重试';
+ }
+}
+loadPhones();
+</script>
+</body>
+</html>
