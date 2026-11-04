@@ -1396,3 +1396,30 @@ th {
     }
   }
 }
+
+.business-contact {
+  margin-top: 28px;
+  padding-block: 18px;
+  border-block: 1px solid var(--line);
+}
+.business-contact p {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  margin: 8px 0;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+.business-contact span {
+  color: var(--muted);
+  min-width: 85px;
+  font-size: 11px;
+}
+.business-contact strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+.business-contact a {
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}

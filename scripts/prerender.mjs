@@ -1,3 +1,4 @@
+import { business } from "../shared/business.js";
 import { readFile, writeFile, mkdir, cp } from "node:fs/promises";
 import {
   languages,
@@ -28,7 +29,7 @@ for (const language of languages)
       body += insightCards[language]
         .map((c) => `<article><h2>${c[1]}</h2><p>${c[2]}</p></article>`)
         .join("");
-    body += `<a href="/${language}/contact/">${t.nav[6]}</a></main>`;
+    body += `<a href="/${language}/contact/">${t.nav[6]}</a><section><p>${escape(business.brand)} · ${escape(business.region[language])}</p><a href="mailto:${escape(business.contactEmail)}">${escape(business.contactEmail)}</a></section></main>`;
     const meta = `<link rel="canonical" href="https://spanler.com${path}">${languages.map((l) => `<link rel="alternate" hreflang="${l === "zh" ? "zh-Hans" : l}" href="https://spanler.com/${l}/${slug === "home" ? "" : slug + "/"}">`).join("")}<link rel="alternate" hreflang="x-default" href="https://spanler.com/zh/${slug === "home" ? "" : slug + "/"}"><meta property="og:title" content="${escape(p.title.replaceAll("\n", " "))} · Spanler"><meta property="og:description" content="${escape(p.description)}"><meta property="og:type" content="website"><meta property="og:url" content="https://spanler.com${path}"><meta name="twitter:card" content="summary">`;
     const html = shell
       .replace(

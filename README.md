@@ -11,6 +11,8 @@
 - 原电话商城代码已移除。原代码归档在当前环境 `/workspace/spanler-backups/legacy-source-20261104.tar.gz`，旧本地测试数据库也已归档后清除，新版使用独立数据库；线上数据库尚未操作。
 - 方案中“78页”尚未确认，当前按 7 个核心栏目实现。尚未提供最终系统提示词，因此 `shared/content.js` 包含可审阅的初稿。
 
+公开业务信息：品牌 Spanler，主要服务地区洛杉矶；联系、隐私和通知邮箱均为 `zzy4628@gmail.com`。用户已有服务器，NocoDB部署等待服务器接入信息。
+
 ## 本地运行
 
 需要 Node.js 22.12+（当前验证 Node 24）。当前任务已隔离，使用现有 checkout；除非用户要求，不创建 Git worktree。
@@ -41,6 +43,7 @@ npm run test:browser     # 使用Chromium验证页面、后台发布与媒体展
 - [后台操作手册](docs/CMS.md)
 - [Groq、费用与数据保留](docs/AI.md)
 - [NocoDB、表单与邮件](docs/CRM.md)
+- [已有服务器部署 NocoDB](deployment/nocodb/README.md)
 - [验收记录与待办](docs/ACCEPTANCE.md)
 
 ## 重要边界

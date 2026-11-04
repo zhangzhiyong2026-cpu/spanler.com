@@ -10,6 +10,8 @@
 
 ## NocoDB
 
+用户已确认有服务器；部署方案见 [已有服务器部署](../deployment/nocodb/README.md)，实际服务器尚未接入。
+
 NocoDB自建需要已有服务器或另行选定托管方案；它不能直接运行在Pages Functions。开源许可免费不代表服务器免费，托管免费层是否可用应在选型时核实。
 
 可以使用以下两种方式：
@@ -35,11 +37,13 @@ NocoDB自建需要已有服务器或另行选定托管方案；它不能直接�
 | utm | Long text或JSON | records模式以JSON字符串发送 |
 | created_at | Date/time | UTC时间 |
 
+当前固定NocoDB版本的本地验证确认：自动生成的 `Id` 主键与外部线索 `id` 文本字段不同，建表请求中的pk标记不会让该文本列自动唯一。需核实物理列名后添加PostgreSQL唯一索引，方法见部署目录文档。
+
 请求有 `Idempotency-Key` 头，但接收端不一定支持。需在CRM对 `id` 设唯一约束或用接收器做upsert，避免网络超时后手动重试造成重复。当前没有跨系统事务或exactly-once保证。先用测试线索真实验证版本/字段匹配，再接生产。
 
 ## Resend邮件通知
 
-建立Resend账号、验证发件域名，配置 RESEND_API_KEY、MAIL_FROM、NOTIFY_EMAIL。邮件使用纯文本并保留 lead UUID 作为幂等键，不渲染用户HTML。发件服务免费额度、域名验证和送达率由供应商决定。
+通知收件地址已确认并设为 `zzy4628@gmail.com`。建立Resend账号、验证发件域名，再配置 RESEND_API_KEY、MAIL_FROM。Gmail是收件地址，不应直接作为未经Resend域名验证的发件地址。邮件使用纯文本并保留 lead UUID 作为幂等键，不渲染用户HTML。发件服务免费额度、域名验证和送达率由供应商决定。
 
 测试：提交一条带唯一标识的咨询 → 管理后台出现 → NocoDB出现且标签正确 → 收件箱收到通知 → 状态分别为sent。模拟无效token时，应保留failed状态而不丢失D1记录，修正后重试。
 

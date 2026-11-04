@@ -23,6 +23,7 @@
     "AI_MAX_OUTPUT_TOKENS": "400",
     "CHAT_RETENTION_DAYS": "30",
     "AI_ENABLED": "false",
-    "NOCODB_MODE": "webhook",
+    "NOCODB_MODE": "records",
+    "NOTIFY_EMAIL": "zzy4628@gmail.com",
   },
 }

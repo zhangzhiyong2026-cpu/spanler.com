@@ -1,0 +1,10 @@
+# For a host already using Caddy, add this site to its existing config.
+# Do not replace existing sites. DNS must resolve to the server first.
+crm.spanler.com {
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:8088
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+    }
+}

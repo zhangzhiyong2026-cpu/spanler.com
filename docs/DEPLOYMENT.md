@@ -4,9 +4,9 @@
 
 - Cloudflare 账号及 `spanler.com` 域名管理权限。
 - GitHub 仓库 `zhangzhiyong2026-cpu/spanler.com` 的写入/Pages 连接权限。
-- NocoDB 已部署地址或自建服务器方案、接收线索的 HTTPS endpoint。
-- 通知收件邮箱、经过验证的发件域名/地址。
-- 网站运营主体名称、隐私联系邮箱、服务地区和专业资质；目前未编造这些信息。
+- 用户已有服务器，需提供地址、系统与接入方式以部署NocoDB；暂按 `crm.spanler.com` 准备，尚未创建DNS。
+- 通知收件邮箱已确认：`zzy4628@gmail.com`；经过验证的发件域名/地址仍待配置。
+- 品牌：Spanler；主要服务地区：洛杉矶；联系及隐私邮箱：`zzy4628@gmail.com`。注册主体与专业资质仍需确认，不把品牌名冒充注册公司信息。
 - Groq API key。所有密钥在供应商或 Cloudflare 设置中输入，不能发在聊天或写入 Git。
 
 部署代理需要在安全的环境设置中填写 CLOUDFLARE_API_TOKEN，令牌限定所需账号并包含 Pages、D1、R2 管理权限；只有确需修改域名记录时才增加相应域名的DNS编辑权限。不要把代理注入的占位值复制成 Pages Secret，生产模型/CRM/邮件密钥应通过Cloudflare控制台单独安全配置。
