@@ -1,1 +1,42 @@
-<h1>Marketplace / 云电话分类 (主站入口B)</h1><p>展示所有电话号，卡片点击跳到 buy子站二级域名</p><a href="/buy/">去 buy.spanler.com</a>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marketplace / 云电话分类 - Spanler.com</title>
+<style>
+body{background:#0A0A0B;color:#EAEAF0;font-family:system-ui;margin:0;padding:20px}
+.card{background:#151518;border:1px solid #222;border-radius:16px;padding:16px;margin:12px 0}
+.btn{background:#7C6CFF;color:white;padding:8px 14px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+h1{color:#7C6CFF}
+</style>
+</head>
+<body>
+<h1>Marketplace / 云电话分类 (真数据版)</h1>
+<p>展示所有电话号，卡片点击跳到 buy子站二级域名 | D1: phone_numbers 表真数据</p>
+<div id="list" class="grid">加载中... D1数据读取中...</div>
+<script>
+async function load(){
+  try{
+    const r = await fetch('/api/phones');
+    const data = await r.json();
+    const el = document.getElementById('list');
+    if(!data.length){el.innerHTML='暂无数据，请检查D1绑定';return}
+    el.innerHTML = data.map(p=>`
+      <div class="card">
+        <h3>${p.number.replace(/(\d{3})(\d{3})(\d{4})/,'$1-$2-$3')}</h3>
+        <p>${p.description||''}</p>
+        <p>价格: $${p.price} | 月租 $${p.monthly_fee}</p>
+        <p style="font-size:12px;color:#999">${p.subdomain||p.number+'.buy.spanler.com'}</p>
+        <a class="btn" href="/buy/number/${p.number}.html" target="_blank">查看二级域名落地页</a>
+        <a class="btn" style="background:#222" href="https://${p.subdomain||p.number+'.buy.spanler.com'}" target="_blank">打开 ${p.subdomain||''}</a>
+      </div>
+    `).join('');
+  }catch(e){
+    document.getElementById('list').innerHTML='加载失败: '+e.message;
+  }
+}
+load();
+</script>
+</body>
+</html>
