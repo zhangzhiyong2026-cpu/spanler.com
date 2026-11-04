@@ -2,6 +2,10 @@ import { chromium } from "playwright-core";
 import { readFile, mkdir } from "node:fs/promises";
 import assert from "node:assert/strict";
 const base = process.env.BASE_URL || "http://localhost:3001";
+const testUrl = new URL(base);
+if (!["localhost", "127.0.0.1"].includes(testUrl.hostname) || testUrl.protocol !== "http:") {
+  throw new Error("Mutation smoke tests only support a local HTTP test server.");
+}
 const browser = await chromium.launch({
   executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
   args: ["--no-sandbox", "--disable-dev-shm-usage"],

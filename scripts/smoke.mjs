@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 const base = process.env.BASE_URL || "http://localhost:3001";
+const testUrl = new URL(base);
+if (!["localhost", "127.0.0.1"].includes(testUrl.hostname) || testUrl.protocol !== "http:") {
+  throw new Error("Mutation smoke tests only support a local HTTP test server.");
+}
 let cookie = "";
 let count = 0;
 async function req(path, data, method) {
