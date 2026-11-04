@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: zhangzhiyong2026-cpu/spanler.com
+  branch: main
+  base_url: https://spanler.com
+  auth_endpoint: /api/cms/auth
+site_url: https://spanler.com
+media_folder: public/uploads
+public_folder: /uploads
+publish: true
+collections:
+  - name: website
+    label: 三语官网内容（Git发布）
+    files:
+      - name: pages
+        label: 页面文案
+        file: shared/pages.json
+        fields:
+          - name: pages
+            label: 页面列表
+            widget: list
+            summary: '{{fields.language}} / {{fields.slug}}'
+            fields:
+              - {name: slug, label: 页面, widget: select, options: [home, products, solutions, insights, partners, about, contact]}
+              - {name: language, label: 语言, widget: select, options: [zh, en, es]}
+              - {name: title, label: 标题, widget: text}
+              - {name: description, label: 简介, widget: text}
+              - {name: body, label: 正文, widget: text, required: false}
+              - {name: mediaUrl, label: R2媒体链接, widget: string, required: false}
+              - {name: mediaType, label: 媒体MIME类型, widget: string, required: false}
+              - {name: mediaAlt, label: 媒体说明, widget: string, required: false}

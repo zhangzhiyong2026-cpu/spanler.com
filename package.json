@@ -1,11 +1,23 @@
 {
-  "name": "spanler-v41",
-  "version": "4.1.0",
+  "name": "spanler",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "vite --port 3000 --host",
-    "build": "vite build"
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build && node scripts/prerender.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node tests/security.test.mjs",
+    "db:migrate": "wrangler d1 migrations apply DB --local",
+    "dev:full": "wrangler pages dev dist --port 3000",
+    "deploy": "npm run build && wrangler pages deploy dist",
+    "test:smoke": "node scripts/smoke.mjs",
+    "test:browser": "node scripts/browser-check.mjs"
   },
   "devDependencies": {
-    "vite": "^5.0.0"
+    "@sveltia/cms": "0.258.1",
+    "playwright-core": "1.64.1",
+    "vite": "8.3.5",
+    "wrangler": "4.157.0"
   }
 }

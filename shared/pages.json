@@ -1,0 +1,214 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "language": "zh",
+      "title": "让跨境生意，\n从一次好连接开始。",
+      "description": "用 AI 打开海外市场，用本地服务连接生活。Spanler 为出海企业与海外华人，把机会变成下一步。",
+      "body": "",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "products",
+      "language": "zh",
+      "title": "产品与服务",
+      "description": "从海外客户开发，到落地生活支持，让每一步都有清晰的方向。",
+      "body": "AI SDR：协助梳理目标企业画像、触达文案、线索跟进与商务演示预约流程。具体数据来源、外联渠道和自动化范围需在项目开始前共同确认。\n海外生活：围绕旅居准备、当地资源对接和生活服务咨询提供支持。涉及法律、税务、移民或金融事项时，由有资质的独立专业人士提供意见。\n所有服务先确认范围与报价，不承诺获客数量、投资回报或办理结果。",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "solutions",
+      "language": "zh",
+      "title": "为不同阶段，找到适合的跨境方案。",
+      "description": "从海外客户开发，到落地生活支持，让每一步都有清晰的方向。",
+      "body": "对首次出海的企业：先聚焦一个市场、一类客户和一套清晰价值主张。\n对已有销售团队的企业：围绕重复性研究和跟进任务设计 AI 辅助流程，保留人工审核与客户关系管理。\n对海外华人：从当前所在地区、计划时间与实际需求出发，整理可行动的生活服务清单。",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "insights",
+      "language": "zh",
+      "title": "从趋势里，寻找你的下一步。",
+      "description": "从海外客户开发，到落地生活支持，让每一步都有清晰的方向。",
+      "body": "以下是 Spanler 的入门观察，用于帮助你整理问题。具体建议应结合目标市场、业务阶段与当地政策进一步核实。",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "partners",
+      "language": "zh",
+      "title": "连接资源，一起创造跨境价值。",
+      "description": "从海外客户开发，到落地生活支持，让每一步都有清晰的方向。",
+      "body": "我们欢迎本地生活服务商、企业服务团队与出海渠道伙伴交流合作。\n合作前先核实服务资质、所在地区、交付边界与客户信息使用方式。合作条款、费用与责任通过书面协议确认。\n请在联系表单中写明“合作咨询”、业务地区和可提供的服务。",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "about",
+      "language": "zh",
+      "title": "让连接，成为一种长期的能力。",
+      "description": "从海外客户开发，到落地生活支持，让每一步都有清晰的方向。",
+      "body": "Spanler 的目标是连接中国与海外市场，服务企业增长与跨境生活。\n我们相信，技术应帮助团队把时间留给有价值的沟通，服务应让复杂问题变得清晰可行动。\n本网站不展示未经验证的客户案例、业务数据或资质。运营主体与专业服务资质将在正式上线前确认。",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "contact",
+      "language": "zh",
+      "title": "联系我们",
+      "description": "告诉我们你正在做什么。我们会根据需求，为你匹配合适的服务方向。",
+      "body": "",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "home",
+      "language": "en",
+      "title": "Your next chapter\nstarts with a connection.",
+      "description": "Open overseas markets with AI. Navigate life abroad with local support. We help businesses and Chinese communities turn opportunity into a practical next step.",
+      "body": "",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "products",
+      "language": "en",
+      "title": "Services built around your next step.",
+      "description": "From overseas customer development to life in a new country, move forward with a clearer direction.",
+      "body": "AI SDR: plan your target account profile, outreach messaging, lead follow-up and demo booking workflow. Agree on data sources, communication channels and the scope of automation before work begins.\nLife abroad: practical guidance for relocation planning, local resources and everyday services. Legal, tax, immigration and financial matters require appropriately qualified independent professionals.\nScope and pricing are agreed in advance. We do not guarantee lead counts, returns or application outcomes.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "solutions",
+      "language": "en",
+      "title": "The right approach for your stage.",
+      "description": "From overseas customer development to life in a new country, move forward with a clearer direction.",
+      "body": "For first-time exporters: focus on one market, one customer segment and one clear value proposition.\nFor established sales teams: design AI-assisted research and follow-up workflows with human review and relationship ownership.\nFor Chinese communities abroad: build a practical service checklist around location, timeline and individual needs.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "insights",
+      "language": "en",
+      "title": "A fresh perspective on going global.",
+      "description": "From overseas customer development to life in a new country, move forward with a clearer direction.",
+      "body": "These introductory notes help you frame the right questions. Validate specific decisions against your market, business stage and applicable local requirements.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "partners",
+      "language": "en",
+      "title": "Build connections. Create value together.",
+      "description": "From overseas customer development to life in a new country, move forward with a clearer direction.",
+      "body": "We welcome local service providers, business service teams and overseas growth partners.\nBefore collaboration, we confirm qualifications, service regions, delivery boundaries and customer data handling. Scope, fees and responsibilities require a written agreement.\nUse the contact form to introduce your region and services, with “Partnership inquiry” in the message.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "about",
+      "language": "en",
+      "title": "Connections that go beyond borders.",
+      "description": "From overseas customer development to life in a new country, move forward with a clearer direction.",
+      "body": "Spanler aims to connect China with overseas markets through business growth and practical life services.\nWe believe technology should make room for meaningful conversations, and good service should turn complex questions into actionable steps.\nWe do not publish unverified client results or credentials. Operator details and professional qualifications must be confirmed before launch.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "contact",
+      "language": "en",
+      "title": "Contact us",
+      "description": "Tell us what you’re working on. We’ll connect your needs with the right service.",
+      "body": "",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "home",
+      "language": "es",
+      "title": "Tu próxima etapa\nempieza con una conexión.",
+      "description": "Abre mercados con IA y encuentra apoyo para vivir en el extranjero. Conectamos empresas y comunidades chinas con su próxima oportunidad.",
+      "body": "",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "products",
+      "language": "es",
+      "title": "Servicios para tu próximo paso.",
+      "description": "Desde la captación de clientes hasta la vida en otro país, avanza con una dirección clara.",
+      "body": "AI SDR: planificación de clientes objetivo, mensajes, seguimiento y demostraciones. Las fuentes de datos, los canales y el alcance se acuerdan antes de empezar.\nVida en el extranjero: orientación práctica, recursos locales y servicios cotidianos. Para asuntos legales, fiscales, migratorios o financieros se necesitan profesionales independientes cualificados.\nAcordamos alcance y precio previamente. No garantizamos clientes, rentabilidad ni resultados de trámites.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "solutions",
+      "language": "es",
+      "title": "El enfoque adecuado para tu etapa.",
+      "description": "Desde la captación de clientes hasta la vida en otro país, avanza con una dirección clara.",
+      "body": "Primera expansión: enfócate en un mercado, un segmento y una propuesta clara.\nEquipos comerciales: diseña investigación y seguimiento asistidos por IA con revisión humana.\nComunidad china en el extranjero: organiza servicios según ubicación, plazos y necesidades reales.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "insights",
+      "language": "es",
+      "title": "Una nueva perspectiva internacional.",
+      "description": "Desde la captación de clientes hasta la vida en otro país, avanza con una dirección clara.",
+      "body": "Estas notas iniciales ayudan a plantear las preguntas adecuadas. Comprueba cada decisión según el mercado y las normas locales.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "partners",
+      "language": "es",
+      "title": "Conectemos recursos y creemos valor.",
+      "description": "Desde la captación de clientes hasta la vida en otro país, avanza con una dirección clara.",
+      "body": "Buscamos proveedores locales, equipos de servicios empresariales y socios de expansión.\nVerificamos cualificaciones, regiones, límites del servicio y tratamiento de datos. Alcance, tarifas y responsabilidades se acuerdan por escrito.\nPresenta tu región y servicios mediante el formulario con “Colaboración” en el mensaje.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "about",
+      "language": "es",
+      "title": "Conexiones que cruzan fronteras.",
+      "description": "Desde la captación de clientes hasta la vida en otro país, avanza con una dirección clara.",
+      "body": "Spanler busca conectar China con mercados internacionales mediante servicios para empresas y la vida en el extranjero.\nLa tecnología debe dejar tiempo para conversaciones útiles, y el servicio debe convertir preguntas complejas en pasos claros.\nNo publicamos resultados ni credenciales sin verificar. Los datos del operador se confirmarán antes del lanzamiento.",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    },
+    {
+      "slug": "contact",
+      "language": "es",
+      "title": "Contáctanos",
+      "description": "Cuéntanos tu proyecto y encontraremos el servicio adecuado.",
+      "body": "",
+      "mediaUrl": "",
+      "mediaType": "",
+      "mediaAlt": ""
+    }
+  ]
+}
