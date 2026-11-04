@@ -4,7 +4,7 @@
 
 - Cloudflare 账号及 `spanler.com` 域名管理权限。
 - GitHub 仓库 `zhangzhiyong2026-cpu/spanler.com` 的写入/Pages 连接权限。
-- 用户已有服务器，需提供地址、系统与接入方式以部署NocoDB；暂按 `crm.spanler.com` 准备，尚未创建DNS。
+- 用户已澄清只有Cloudflare网站托管，没有独立服务器。当前先部署官网及D1内容/线索后台，NocoDB保留为后续可选集成，不创建crm域名。
 - 通知收件邮箱已确认：`zzy4628@gmail.com`；经过验证的发件域名/地址仍待配置。
 - 品牌：Spanler；主要服务地区：洛杉矶；联系及隐私邮箱：`zzy4628@gmail.com`。注册主体与专业资质仍需确认，不把品牌名冒充注册公司信息。
 - Groq API key。所有密钥在供应商或 Cloudflare 设置中输入，不能发在聊天或写入 Git。
@@ -22,14 +22,13 @@ npx wrangler r2 bucket create spanler-media
 npx wrangler r2 bucket create spanler-chat-logs
 ```
 
-将创建结果中的真实 `database_id` 填到 `wrangler.jsonc`。文件里当前的全零 UUID 是明确的本地占位符，不能拿它上线。
+将创建结果中的真实 `database_id` 填到 `wrangler.jsonc`。当前已配置正式新库 `spanler-content`，实际UUID见 `wrangler.jsonc`，原商城库保留。
 
 ```sh
 npx wrangler d1 migrations apply DB --remote
 npm ci
 npm run build
-npx wrangler pages project create spanler --production-branch main
-npx wrangler pages deploy dist --project-name spanler --branch main
+npx wrangler pages deploy dist --project-name spanler-com --branch main
 ```
 
 也可使用 Pages Git 集成：构建 `npm run build`，输出 `dist`，Node 24，配置与 `wrangler.jsonc` 相同的绑定：`DB`、`MEDIA`、`CHAT_LOGS`。初次正式发布前确认数据库迁移已执行。不要在每次部署时重置数据库。
@@ -60,7 +59,7 @@ Pages 生产与预览环境分别配置。生产不要配置 `LOCAL_DEV=true`。
 | GITHUB_OAUTH_CLIENT_SECRET | Secret | OAuth app secret |
 | GA4_ID | 普通变量 | 可选 G- 开头的衡量ID |
 
-Secret 可用 `npx wrangler pages secret put NAME --project-name spanler` 或 Pages 控制台安全设置。绝不把 `.dev.vars` 上传到 Git。
+Secret 可用 `npx wrangler pages secret put NAME --project-name spanler-com` 或 Pages 控制台安全设置。绝不把 `.dev.vars` 上传到 Git。
 
 ## 4. Turnstile / DNS / Git CMS
 
@@ -87,3 +86,9 @@ MEDIA 可经 `/media/<uuid>/<filename>` 公开读取，用于官网素材；不�
 ## 7. 真实验收
 
 用真实浏览器分别验收三语站点、登录、文件上传与播放/PDF、内容发布、Turnstile 成败、表单CRM新增记录、邮件送达、Groq回复和私有R2日志。检查外部服务失败时保留 pending/failed 状态，后台可重试。确认后再开启 AI 和正式域名。
+
+## 当前实际部署目标
+
+Cloudflare账号已用账户级API令牌验证；项目为已有 `spanler-com`，域名spanler.com已处于active。Pages、D1、R2权限可用；Turnstile API返回403，正在请用户给现有令牌补充Turnstile Edit。
+
+新建内容库的生产迁移已执行，媒体桶复用spanler-media，新的私有日志桶为spanler-chat-logs。只先部署官网/后台，AI保持关闭、现有Groq绑定保留，不自动删除任何日志或旧数据库。后台凭据保存在云环境的私有交付文件中，不在Git中。人机验证配置完成前，生产表单和后台登录会拒绝请求，不能称为全部验收通过。

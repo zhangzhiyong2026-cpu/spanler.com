@@ -1,13 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "spanler",
+  "name": "spanler-com",
   "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-11-03",
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "spanler-content",
-      "database_id": "00000000-0000-0000-0000-000000000001",
+      "database_id": "2cc5b1ca-d01e-4b4d-9218-c65aa8bd0972",
       "migrations_dir": "migrations",
     },
   ],

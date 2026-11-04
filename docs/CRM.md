@@ -10,7 +10,7 @@
 
 ## NocoDB
 
-用户已确认有服务器；部署方案见 [已有服务器部署](../deployment/nocodb/README.md)，实际服务器尚未接入。
+用户后续澄清没有独立服务器，只有Cloudflare网站托管。当前先使用官网D1线索库；[NocoDB部署方案](../deployment/nocodb/README.md)保留为后续选项，尚未连接任何生产CRM。
 
 NocoDB自建需要已有服务器或另行选定托管方案；它不能直接运行在Pages Functions。开源许可免费不代表服务器免费，托管免费层是否可用应在选型时核实。
 
