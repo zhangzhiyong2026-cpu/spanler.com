@@ -39,3 +39,9 @@ Cloudflare免费额度、NocoDB服务器、模型与邮件收费均需按真实�
 用户已有服务器，已准备固定摘要的NocoDB/PostgreSQL Compose、随机密钥生成、反向代理样例、建表字段与备份脚本。在独立云端测试中实际验证了启动/健康、管理员初始化、API建表及线索增查、真实SQL唯一索引去重与备份。NocoDB默认自增主键不会自动给外部UUID去重，此差异已写入部署步骤。
 
 仍等待用户服务器地址、系统和接入方式。尚未在用户服务器部署，也未建立crm.spanler.com的DNS/HTTPS，未验证生产API-token或CRM/邮件的端到端链路。
+
+## Cloudflare正式部署进展
+
+账户级API令牌已验证，spanler-com现有项目与spanler.com域名绑定已确认。新建spanler-content已执行生产迁移，绑定MEDIA/CHAT_LOGS，已创建专用Managed Turnstile，并生成私有管理员凭据。
+
+Cloudflare直传发布成功，GitHub main已在用户明确批准后同步。Git自动构建的旧Wrangler3解析问题已定位，现改为Wrangler4预编译高级模式Worker；本地该模式的10类接口检查通过。生产域名HTTP验收仍待云环境的新网络名单生效。AI保持关闭，邮件和外部CRM未启用。

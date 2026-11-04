@@ -274,7 +274,7 @@ async function route(c) {
     return cmsAuth(request, env);
   if (path === "/api/config" && method === "GET")
     return json({
-      turnstileSiteKey: env.TURNSTILE_SITE_KEY || "",
+      turnstileSiteKey: local(env) ? "" : env.TURNSTILE_SITE_KEY || "",
       aiEnabled:
         env.AI_ENABLED === "true" && !!env.GROQ_API_KEY && !!env.CHAT_LOGS,
       ga4Id: env.GA4_ID || "",

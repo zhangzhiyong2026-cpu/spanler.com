@@ -27,7 +27,7 @@ npx wrangler d1 migrations apply DB --local --persist-to /workspace/spanler-v2-s
 npx wrangler pages dev dist --port 3001 --persist-to /workspace/spanler-v2-state
 ```
 
-当前环境已生成权限为 0600 的 `.dev.vars`，不要覆盖或打印它。迁移可重复执行，不会重新灌入或清空已有数据。修改前端后重新构建；Functions 由 Wrangler 监听。纯前端 `npm run dev` 不执行 API。
+当前环境已生成权限为 0600 的 `.dev.vars`，不要覆盖或打印它。迁移可重复执行，不会重新灌入或清空已有数据。修改前端或Functions源码后重新构建；Pages dev监听构建产物。纯前端 `npm run dev` 不执行 API。
 
 ```sh
 npm test                 # 9项安全/AI模拟测试
@@ -49,3 +49,5 @@ npm run test:browser     # 使用Chromium验证页面、后台发布与媒体展
 ## 重要边界
 
 NocoDB 开源软件免费，但自建需要常驻服务器；Cloudflare 免费额度和第三方价格受供应商政策约束，不能保证永久零月租。未配置的外部服务明确显示不可用或待同步，不伪造成功。隐私说明是待运营者和法律顾问审核的初稿，非合规保证。
+
+构建会使用项目锁定的Wrangler4把Functions预编译到 `dist/_worker.js/`（Pages高级模式），避免Git构建平台内置旧Wrangler无法解析JSON import attributes。不要删除这一步后直接上传原始Functions。

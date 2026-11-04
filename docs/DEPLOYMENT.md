@@ -92,3 +92,5 @@ MEDIA 可经 `/media/<uuid>/<filename>` 公开读取，用于官网素材；不�
 Cloudflare账号已用账户级API令牌验证；项目为已有 `spanler-com`，域名spanler.com已处于active。Pages、D1、R2权限可用；用户已补充Turnstile Edit，专用Managed组件已创建并绑定；下一步重新发布并验收。
 
 新建内容库的生产迁移已执行，媒体桶复用spanler-media，新的私有日志桶为spanler-chat-logs。只先部署官网/后台，AI保持关闭、现有Groq绑定保留，不自动删除任何日志或旧数据库。后台凭据保存在云环境的私有交付文件中，不在Git中。人机验证配置完成前，生产表单和后台登录会拒绝请求，不能称为全部验收通过。
+
+自动构建兼容性：Cloudflare Git构建环境内置的Wrangler3不能解析 `import ... with {type:"json"}`。`npm run build`现用锁定的Wrangler4输出 `dist/_worker.js/` 与 `_routes.json`，平台按高级模式上传预编译的Worker。标准多模块输出必须使用 `--outdir`；当前Wrangler4的旧 `--outfile` 会输出上传用multipart格式，不能作为JS源码部署。

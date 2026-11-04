@@ -1,4 +1,10 @@
 export async function onRequest(context) {
+  const canonical = new URL(context.request.url);
+  if (canonical.hostname === "www.spanler.com") {
+    canonical.hostname = "spanler.com";
+    canonical.protocol = "https:";
+    return Response.redirect(canonical.toString(), 308);
+  }
   const response = await context.next();
   const headers = new Headers(response.headers);
   headers.set("X-Content-Type-Options", "nosniff");
